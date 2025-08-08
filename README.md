@@ -89,6 +89,58 @@ A **production-grade password manager** with enterprise-level security, encrypti
 
 ---
 
+##  Must have features(given in the doc)
+
+   * Add credentials (site name, username, password)
+   * View saved credentials
+   * Update or delete entries
+   * Master password" login
+
+---
+## High-Level Architcture(Components)
+```
+Clients
+  ├─ Web (React)
+  ├─ Browser extension (autofill)
+  └─ Mobile (optional)
+      ↓ HTTPS (TLS)
+API Gateway / Load Balancer (NGINX / Envoy)
+      ↓
+Auth Service (JWT + OAuth2)  ←→ Identity Provider (optional)
+      ↓
+API Backend (Microservice / Monolith)
+  ├─ Vault Service (encryption orchestration)
+  ├─ Storage Service (DB access)
+  ├─ Sync Service (per device offsets)
+  └─ Audit & Admin Service
+      ↓
+Data Plane:
+  ├─ PostgreSQL (metadata, accounts)  ← primary persistence
+  ├─ Cassandra / Scylla (append-only message store / large history) ← optional
+  ├─ Redis (cache, sessions, rate limiter counters)
+  ├─ Kafka (event bus: audit events, metrics, analytics)
+  └─ HashiCorp Vault / AWS KMS (master key management)
+Observability:
+  ├─ Prometheus + Grafana (metrics)
+  ├─ ELK / Loki + Kibana (logs)
+  └─ Jaeger (tracing)
+```
+## Checklist
+
+| Area                                         | Checked |
+| -------------------------------------------- | ------- |
+| **Security audits** (independent + internal) | ☐       |
+| **Rate limiting + brute-force protection**   | ☑       |
+| **Audit log immutability**                   | ☐       |
+| **Key rotation strategy**                    | ☐       |
+| **Disaster recovery & backups (encrypted)**  | ☐       |
+| **Compliance (GDPR, SOC2, etc.)** if needed  | ☐       |
+| **Penetration Testing (incl. extension)**    | ☐       |
+| **RBAC / Admin Panel access control**        | ☐       |
+| **Monitoring & alert thresholds in place**   | ☐       |
+| **Detailed logging with PII redaction**      | ☐       |
+| **Data export/removal for user** (GDPR)      | ☐       |
+
 ## 📄 License
 
 MIT License — Free to use and modify
