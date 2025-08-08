@@ -8,12 +8,12 @@ A **production-grade password manager** with enterprise-level security, encrypti
 
 ### **Languages**
 
-* **Backend:** Java (Spring Boot) **or** Python (FastAPI)
+* **Backend:** Java/Spring
 * **Frontend:** JavaScript/TypeScript (React + TailwindCSS)
 
 ### **Frameworks & Libraries**
 
-* **Spring Boot** *(Java)* or **FastAPI** *(Python)* for API development
+* **Spring Boot** *(Java)* for API development
 * **JWT** for authentication
 * **React** for UI
 * **TailwindCSS** for styling
