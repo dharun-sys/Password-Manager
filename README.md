@@ -148,7 +148,7 @@ The focus is on production-grade architecture, security, and clean, maintainable
 
 ---
 
-## 🚀 Month-Long Plan Overview
+## Month-Long Plan Overview
 
 
 | **Week 1**   Authentication System         |
@@ -182,7 +182,7 @@ The focus is on production-grade architecture, security, and clean, maintainable
 
 ---
 
-## 🛠 Development Process
+##  Development Process
 
 - Weekly sprints with daily standups for progress and blockers.  
 - Code reviews required before merges.  
@@ -191,7 +191,7 @@ The focus is on production-grade architecture, security, and clean, maintainable
 
 ---
 
-## 🎯 Project Goals
+##  Project Goals
 
 - Build a **production-ready, open-source** zero-knowledge password manager.  
 - Ensure **end-to-end encryption** with no sensitive data leakage.  
@@ -200,7 +200,7 @@ The focus is on production-grade architecture, security, and clean, maintainable
 
 ---
 
-For detailed weekly task breakdowns and assignments, see the [Issues](https://github.com/your-repo/issues) section.
+For detailed weekly task breakdowns and assignments, see the [Issues](https://github.com/dharun-sys/Password-Manager/issues) section.
 
 ---
 
