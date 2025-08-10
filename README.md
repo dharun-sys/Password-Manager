@@ -141,6 +141,73 @@ Observability:
 | **Detailed logging with PII redaction**      | ☐       |
 | **Data export/removal for user** (GDPR)      | ☐       |
 
+# Password Manager Project Roadmap
+
+This roadmap outlines the plan to build a **secure, zero-knowledge password manager** over the next 4 weeks.  
+The focus is on production-grade architecture, security, and clean, maintainable code.
+
+---
+
+## 🚀 Month-Long Plan Overview
+
+
+| **Week 1**   Authentication System         |
+|--------------------------------------------|
+| User registration and login with zero-knowledge-compatible authentication.  |
+| JWT-based access and refresh tokens implemented.  |
+| Rate limiting and brute-force protection enabled.  |
+| Backend APIs fully functional and integrated with a secure frontend login UI.|
+
+| **Week 2**   Vault System Foundation       |  
+|---------------------------------------------|
+| Design and implement encrypted vault data structure.  |
+| Client-side encryption and decryption functions using vetted cryptographic libraries. | 
+| Backend APIs to store and retrieve encrypted vault blobs (stubs). |  
+| Unit tests covering cryptography functions. |
+
+| **Week 3**   Vault UI & CRUD Operations    |  
+|---------------------------------------------|
+| Build frontend UI for adding, editing, deleting password entries inside the vault. | 
+| Integrate vault UI with backend APIs for saving and loading encrypted vault data. | 
+| Implement local caching and vault auto-lock.  |
+| Integration testing across frontend and backend.|
+
+| **Week 4**   Sync, Conflict Resolution & Polish |  
+|--------------------------------------------------|
+| Implement vault synchronization across multiple devices with conflict detection and resolution. | 
+| Final UI/UX polish and accessibility improvements.|  
+| Comprehensive security and integration testing.  |
+| Prepare deployment pipelines and staging environment for demo. | 
+| Documentation and developer guides updated.|
+
+---
+
+## 🛠 Development Process
+
+- Weekly sprints with daily standups for progress and blockers.  
+- Code reviews required before merges.  
+- CI/CD pipeline runs tests and security checks on every push.  
+- Follow zero-knowledge principles strictly; master passwords never leave clients in plaintext.
+
+---
+
+## 🎯 Project Goals
+
+- Build a **production-ready, open-source** zero-knowledge password manager.  
+- Ensure **end-to-end encryption** with no sensitive data leakage.  
+- Maintain clean, modular, and well-tested codebase.  
+- Prepare for future extensions like browser extensions and mobile apps with a shared backend.
+
+---
+
+For detailed weekly task breakdowns and assignments, see the [Issues](https://github.com/your-repo/issues) section.
+
+---
+
+*Let’s build something secure and trustable — together.*
+
+
+
 ## 📄 License
 
 MIT License — Free to use and modify
