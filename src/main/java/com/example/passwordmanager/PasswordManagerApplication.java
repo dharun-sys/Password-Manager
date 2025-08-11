@@ -8,6 +8,5 @@ public class PasswordManagerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PasswordManagerApplication.class, args);
-
         //dont do anything here
     }
